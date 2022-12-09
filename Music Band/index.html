@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    
+    
+    <style>
+        #nav {
+            display: flex;
+            justify-items: baseline;
+        }
+    
+    </style>
+<body>
+    
+    
+    
+    
+    
+    
+<div id="nav" class="w3-container w3-white">
+        <button id="open" class="w3-button w3-xlarge w3-right" onclick="w3_open()">&#9776;</button>
+    <h1>Band.io</h1>
+    
+</div>
+<!-- Navigation -->
+<div class="w3-sidebar w3-bar-block w3-border-left" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">Band</a>
+  <a href="#" class="w3-bar-item w3-button">Tour</a>
+  <a href="#" class="w3-bar-item w3-button">Contact</a>
+</div>
+    
+<section>
+  <img class="mySlides" src="https://www.w3schools.com/howto/img_band_la.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.w3schools.com/howto/img_band_ny.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.w3schools.com/howto/img_band_chicago.jpg" style="width:100%">
+</section>
+    
+<section class="w3-container w3-center" style="max-width:100%">
+  <h2 class="w3-wide">THE BAND</h2>
+  <p class="w3-opacity"><i>We love music</i></p>
+</section>
+    
+<section class="w3-container w3-content w3-center" style="max-width:600px">
+<p class="w3-justify">
+We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</section>
+    
+<section class="w3-row-padding w3-center w3-light-grey">
+  <article class="w3-third">
+    <p>John</p>
+    <img src="https://www.w3schools.com/howto/img_bandmember.jpg" alt="Random Name" style="width:100%">
+  </article>
+  <article class="w3-third">
+    <p>Paul</p>
+    <img src="https://www.w3schools.com/howto/img_bandmember.jpg" alt="Random Name" style="width:100%">
+  </article>
+  <article class="w3-third">
+    <p>Ringo</p>
+    <img src="https://www.w3schools.com/howto/img_bandmember.jpg" alt="Random Name" style="width:100%">
+  </article>
+</section>
+    
+<footer class="w3-container w3-padding-64 w3-center w3-black w3-xlarge">
+  <a href="#"><i class="fa fa-facebook-official"></i></a>
+  <a href="#"><i class="fa fa-pinterest-p"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <a href="#"><i class="fa fa-flickr"></i></a>
+  <a href="#"><i class="fa fa-linkedin"></i></a>
+  <p class="w3-medium">
+    Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </p>
+</footer>
+
+</body>
+    
+<script>
+    var myIndex = 0;
+    
+    corousel();
+    
+    function corousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}
+        x[myIndex - 1].style.display = "block";
+        setTimeout(corousel, 3000);
+    }
+    
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+    
+    
+    
+</script>    
+
+</html>
